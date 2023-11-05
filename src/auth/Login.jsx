@@ -1,14 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { AuthProvider } from "../../context/AuthContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FcGoogle } from 'react-icons/fc'
 import { Toaster, toast } from "react-hot-toast";
 
 const Login = () => {
-  const { login, user, googleAuth } = useContext(AuthProvider);
+  const { login,  googleAuth } = useContext(AuthProvider);
   const [ error, setError ] = useState(null)
+  const navigate = useNavigate();
+  const location = useLocation()
 
   const HandleLogin = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ const Login = () => {
         console.log(res);
         setError(null);
         toast("Log in successful");
+        navigate(location?.state ? location.state : "/")
       })
       .catch((err) => {console.log(err)
         setError(err.message)});
@@ -33,6 +36,7 @@ const Login = () => {
         console.log(data);
         setError(null);
         toast("Log in successful");
+        navigate(location?.state ? location.state : "/")
       })
       .catch((err) => {console.log(err)
         setError(err.message)});

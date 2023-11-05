@@ -1,21 +1,24 @@
 import { useContext, useState } from "react";
 import { AuthProvider } from "../../context/AuthContext";
 import { Toaster, toast } from "react-hot-toast";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FcGoogle } from 'react-icons/fc'
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../firebase/firebase.config";
 
 const Register = () => {
-  const { signup, user, googleAuth } = useContext(AuthProvider);
+  const { signup, googleAuth } = useContext(AuthProvider);
   const [error, setError] = useState(null);
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const HandleRegister = (e) => {
     e.preventDefault();
 
     const form = e.target;
     const name = form.name.value;
+    const image = form.image.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -36,10 +39,12 @@ const Register = () => {
         console.log(data);
         setError(null);
         updateProfile(auth.currentUser, {
-          displayName: name
+          displayName: name,
+          photoURL: image
         })
         .then(toast("Signed up successfully"))
-        .catch(err => console.log(err))
+        .catch(err => console.log(err));
+        navigate(location?.state ? location.state : "/")
       })
       .catch((err) => {console.log(err)
         setError(err.message)});
@@ -50,12 +55,8 @@ const Register = () => {
       .then((data) => {
         console.log(data);
         setError(null);
-        updateProfile(auth.currentUser, {
-          displayName: name
-        })
-        .then(toast("Signed up successfully"))
-        .catch(err => console.log(err))
-      })
+        toast("Signed up successfully");
+        navigate(location?.state ? location.state : "/")})
       .catch((err) => {console.log(err)
       setError(err.message)});
   };
@@ -92,6 +93,19 @@ const Register = () => {
                     type="text"
                     placeholder="username"
                     name="name"
+                    className="input input-bordered rounded-none"
+                    required
+                  />
+                </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Image URL</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="image url"
+                    name="image"
                     className="input input-bordered rounded-none"
                     required
                   />
