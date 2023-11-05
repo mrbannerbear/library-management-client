@@ -11,7 +11,7 @@ const Home = () => {
             <Helmet>
                 <title>First Page | Get Your Favorite Books</title>
             </Helmet>
-            { user && <div className="text-center bg-base-100 text-sm lg:text-md hidden lg:block">
+            { user && <div className="text-center bg-base-100 text-sm lg:text-md hidden lg:flex items-center justify-center gap-2">
                 Hello, {user.displayName}
             </div>}
         </div>

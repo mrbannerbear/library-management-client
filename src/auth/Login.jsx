@@ -42,12 +42,6 @@ const Login = () => {
         setError(err.message)});
   };
 
-  // const HandleLogout = () => {
-  //     logout()
-  //     .then()
-  //     .catch()
-  // }
-
   return (
     <>
          <Helmet>

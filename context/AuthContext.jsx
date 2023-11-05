@@ -14,7 +14,7 @@ import axios from "axios";
 export const AuthProvider = createContext();
 
 const AuthContext = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   const [loading, isLoading] = useState(true);
 
   const signup = (email, password) => {
