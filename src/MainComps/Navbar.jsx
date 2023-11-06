@@ -1,9 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthProvider } from "../../context/AuthContext";
 import { NavLink } from "react-router-dom";
+import { BsFillSunFill, BsMoonFill } from 'react-icons/bs'
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthProvider);
+  const [ lightTheme, setLightTheme ] = useState(true)
+
+  const theme = lightTheme ? "light" : "dark"
+
+  useEffect( () => {
+    document.querySelector('html')?.setAttribute('data-theme', theme)
+  } , [theme] )
+
+  const HandleTheme = () => {
+    setLightTheme(!lightTheme)
+  }
+ 
 
   const paths = [
     {
@@ -13,8 +26,8 @@ const Navbar = () => {
     },
     {
       id: 2,
-      path: "/addBook",
-      Name: "Add Book",
+      path: "/addBooks",
+      name: "Add Book",
     },
     {
       id: 3,
@@ -68,6 +81,13 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
+        <span className="mr-3 lg:mr-5"> 
+          <button onClick={HandleTheme}>
+            {
+              lightTheme ? <BsMoonFill></BsMoonFill> : <BsFillSunFill></BsFillSunFill>
+            }
+          </button>
+        </span>
         <span className="hidden lg:flex items-center gap-5">
           {user ? (
             <>
