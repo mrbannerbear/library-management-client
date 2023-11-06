@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 py-6 lg:pb-12">
+    <div className="navbar bg-base-300 py-6 lg:pb-12 lg:px-12">
       <div className="navbar-start">
         <a className="normal-case text-xl absolute">
           <img
@@ -68,11 +68,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <span className="flex items-center gap-5">
+        <span className="hidden lg:flex items-center gap-5">
           {user ? (
             <>
               <button onClick={HandleLogout}>Log Out</button>
-              <span className="w-12 h-12 rounded-full">
+              <span className="w-8 h-8 rounded-full">
                 <img
                   src={user.photoURL}
                   className="w-full h-full rounded-full"
@@ -84,7 +84,7 @@ const Navbar = () => {
             <NavLink to="/login">Login</NavLink>
           )}
         </span>
-        <div className="dropdown lg:hidden">
+        <div className="dropdown lg:hidden dropdown-left">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,26 +102,29 @@ const Navbar = () => {
             </svg>
           </label>
           <ul
-            tabIndex={0}
+            // tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+             {paths.map((path) => (
+            <NavLink
+              key={path.id}
+              to={path.path}
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "underline" : ""
+              }
+            >
+              <li>{path.name}</li>
+            </NavLink>
+          ))}
+          <li>
+          {user ? (
+            <>
+              <button onClick={HandleLogout} className="text-left">Log Out</button>
+            </>
+          ) : (
+            <NavLink to="/login">Login</NavLink>
+          )}
+          </li>
           </ul>
         </div>
       </div>

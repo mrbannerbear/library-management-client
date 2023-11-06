@@ -7,7 +7,7 @@ import Error from "../src/MainComps/Error";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        // path: "/",
         element: <MainLayout></MainLayout>,
         errorElement: <Error></Error>,
         children: [
@@ -18,12 +18,12 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
-            },
-            {
-                path: "/",
-                element: <Home></Home>
             }
         ]
+    },
+    {
+        path: "/",
+        element: <Home></Home>
     }
 ])
 
