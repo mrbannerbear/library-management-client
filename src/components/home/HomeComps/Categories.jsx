@@ -49,7 +49,7 @@ const Categories = () => {
               <h2 className="mb-6 block font-sans text-4xl font-medium leading-[1.5] tracking-normal text-white antialiased">
                 {each.category}
               </h2>
-              <NavLink to={`/categories/${each.category}`}>
+              <NavLink to={`/categories?category=${each.category}`}>
                 <button className="btn1 text-white">Browse</button>
               </NavLink>
             </div>

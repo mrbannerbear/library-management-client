@@ -35,7 +35,7 @@ const Add = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input
-                  {...register("name")}
+                  {...register("Name")}
                   type="text"
                   placeholder="Book Name"
                   className="input input-bordered  rounded-none"
@@ -48,7 +48,7 @@ const Add = () => {
                   <span className="label-text">Author Name</span>
                 </label>
                 <input
-                  {...register("author")}
+                  {...register("Author Name")}
                   type="text"
                   placeholder="Author Name"
                   className="input input-bordered  rounded-none"
@@ -63,7 +63,7 @@ const Add = () => {
                 <span className="label-text">Image</span>
               </label>
               <input
-                {...register("image")}
+                {...register("Image")}
                 type="text"
                 placeholder="Image URL"
                 className="input input-bordered  rounded-none"
@@ -77,7 +77,7 @@ const Add = () => {
                 <span className="label-text">Quantity</span>
               </label>
               <input
-                {...register("quantity")}
+                {...register("Quantity")}
                 type="number"
                 placeholder="Quantity"
                 className="input input-bordered  rounded-none"
@@ -90,7 +90,7 @@ const Add = () => {
                 <span className="label-text">Category</span>
               </label>
               <select
-                    {...register("category")}
+                    {...register("Category")}
                     className="input input-bordered  rounded-none"
                     required
                   >
@@ -121,7 +121,7 @@ const Add = () => {
               <label className="label">
                 <span className="label-text">Short Description</span>
               </label>
-              <textarea {...register("description")}
+              <textarea {...register("Short description")}
                 placeholder="Short Description"
                 className="input input-bordered  rounded-none"
                 required
@@ -133,7 +133,7 @@ const Add = () => {
                 <span className="label-text">Rating</span>
               </label>
               <input min="1" max="5" step="0.1"
-                {...register("rating")}
+                {...register("Rating")}
                 type="number"
                 placeholder="Rating"
                 className="input input-bordered  rounded-none"
