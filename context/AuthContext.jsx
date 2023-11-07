@@ -30,16 +30,19 @@ const AuthContext = ({ children }) => {
   const provider = new GoogleAuthProvider()
 
   const googleAuth = () => {
+    isLoading(true)
     return signInWithPopup(auth, provider)
   }
 
   const logout = () => {
+    isLoading(true)
     return signOut(auth);
   };
 
   useEffect( () => {
     const unSub = onAuthStateChanged(auth, (user) => {
         setUser(user)
+        isLoading(false)
         const loggedUser = { email: user?.email }
         if(user){
             axios.post("http://localhost:4000/jwt", loggedUser, { withCredentials: true })

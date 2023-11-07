@@ -5,6 +5,8 @@ import Navbar from "../../MainComps/Navbar";
 import Footer from "../../MainComps/Footer";
 import Banner from "./HomeComps/Banner";
 import Categories from "./HomeComps/Categories";
+import TrendingBooks from "./HomeComps/TrendingBooks";
+import Extra from "./HomeComps/Extra";
 
 const Home = () => {
 
@@ -26,7 +28,9 @@ const Home = () => {
             </div>}
         <Banner></Banner>
         </div>
+        <TrendingBooks></TrendingBooks>
         <Categories></Categories>
+        <Extra></Extra>
         </div>
         <Footer></Footer>
         </>

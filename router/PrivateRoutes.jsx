@@ -11,7 +11,7 @@ const PrivateRoutes = ({children}) => {
   if(user){
     return children
   }
-  else if(loading){
+  if(loading){
     return (
         <div className="h-[50vh] flex justify-center items-center">
           <div>
