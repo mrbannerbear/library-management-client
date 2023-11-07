@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { useLocation } from "react-router-dom";
 
 const Update = () => {
@@ -20,8 +21,10 @@ const Update = () => {
 
   const UpdateBook = (d) => {
     axios.put(`http://localhost:4000/books${location.search}`, d)
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+    .then(data => {console.log(data);
+    toast("Updated Successfully")})
+    .catch(err => {console.log(err);
+    toast("Failed to update")})
   };
 
   return (
@@ -37,7 +40,7 @@ const Update = () => {
                     <span className="label-text">Name</span>
                   </label>
                   <input
-                    {...register("name")}
+                    {...register("Name")}
                     defaultValue={data.Name}
                     type="text"
                     placeholder="Book Name"
@@ -51,7 +54,7 @@ const Update = () => {
                     <span className="label-text">Author Name</span>
                   </label>
                   <input
-                    {...register("author")}
+                    {...register("Author Name")}
                     defaultValue={data["Author Name"]}
                     type="text"
                     placeholder="Author Name"
@@ -66,7 +69,7 @@ const Update = () => {
                   <span className="label-text">Image</span>
                 </label>
                 <input
-                  {...register("image")}
+                  {...register("Image")}
                   defaultValue={data.Image}
                   type="text"
                   placeholder="Image URL"
@@ -96,7 +99,7 @@ const Update = () => {
                   </label>
 
                   <select
-                    {...register("category")}
+                    {...register("Category")}
                     value={data.Category}
                     className="input input-bordered  rounded-none"
                     required
@@ -131,7 +134,7 @@ const Update = () => {
                 <textarea
                 rows="20"
                 defaultValue={data["Short description"]}
-                  {...register("description")}
+                  {...register("Short description")}
                   placeholder="Short Description"
                   className="input input-bordered  rounded-none text-sm textarea-lg"
                   required
@@ -139,26 +142,26 @@ const Update = () => {
               </div>
 
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Rating</span>
-                </label>
-                <input min="1" max="5" step="0.1"
-                defaultValue={data.Rating}
-                  {...register("rating")}
-                  type="number"
-                  placeholder="Rating"
-                  className="input input-bordered  rounded-none"
-                  required
-                />
-              </div>
+              <label className="label">
+                <span className="label-text">Rating</span>
+              </label>
+              <input min="1" max="5" step="0.1"
+                {...register("Rating")}
+                type="number"
+                placeholder="Rating"
+                className="input input-bordered  rounded-none"
+                required
+              />
+            </div>
 
               <div className="form-control mt-6">
-                <button className="btn1">Update Book</button>
+                <button className="btn1">Submit Book</button>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };
