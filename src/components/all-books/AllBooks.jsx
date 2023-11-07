@@ -1,7 +1,9 @@
 import axios from "axios";
 import { CiFilter } from "react-icons/ci"
+import { BsStar, BsStarFill } from "react-icons/bs"
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"
+import Rating from "react-rating";
 
 const AllBooks = () => {
   useEffect(() => {
@@ -51,11 +53,20 @@ const AllBooks = () => {
                     {book.Name}
                   </p>
                 </div>
+
                 <p className="block font-sans antialiased font-medium leading-relaxed text-blue-gray-900 text-sm h-5">
                         {book["Author Name"]}
                 </p>
+
                 <p className="block font-sans antialiased font-medium leading-relaxed text-gray-500 text-sm">
                         {book.Category}
+                </p>
+                <p className="mt-4">
+                    <Rating initialRating={book.Rating} readonly 
+                    className="text-xs"
+                    fullSymbol={<BsStarFill></BsStarFill>}
+                    emptySymbol={<BsStar></BsStar>}
+                    ></Rating>
                 </p>
               </div>
               <div className="p-6 pt-0 flex justify-between items-center gap-5">
@@ -67,7 +78,7 @@ const AllBooks = () => {
                   Details
                 </button>
 
-                <NavLink to="/updateBook">
+                <NavLink to={`/updateBook?id=${book._id}`}>
                 <button
                   className="btn1
                   block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

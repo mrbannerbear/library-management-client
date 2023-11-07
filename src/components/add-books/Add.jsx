@@ -1,10 +1,20 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 const Add = () => {
   const { register, handleSubmit } = useForm();
 
   const addBook = d => {
-    console.log(d)
+    axios.post("http://localhost:4000/books", d)
+    .then(data => {
+      console.log(data);
+      toast("Book added successfully")
+    })
+    .catch(err => {
+      console.log(err);
+      toast("Could not add book")
+    })
   }
 
   return (
@@ -79,13 +89,31 @@ const Add = () => {
               <label className="label">
                 <span className="label-text">Category</span>
               </label>
-              <input
-                {...register("category")}
-                type="text"
-                placeholder="Category"
-                className="input input-bordered  rounded-none"
-                required
-              />
+              <select
+                    {...register("category")}
+                    className="input input-bordered  rounded-none"
+                    required
+                  >
+                    <option>Career</option>
+
+                    <option>Science Fiction</option>
+
+                    <option>Biography</option>
+
+                    <option>Thriller</option>
+
+                    <option>Fiction</option>
+
+                    <option>Cooking</option>
+
+                    <option>Horror</option>
+
+                    <option>History</option>
+
+                    <option>Romance</option>
+
+                    <option>Self-Help</option>
+                  </select>
             </div>
 </div>
 
@@ -104,7 +132,7 @@ const Add = () => {
               <label className="label">
                 <span className="label-text">Rating</span>
               </label>
-              <input
+              <input min="1" max="5" step="0.1"
                 {...register("rating")}
                 type="number"
                 placeholder="Rating"
@@ -120,6 +148,7 @@ const Add = () => {
         </div>
       </div>
     </div>
+    <Toaster></Toaster>
  </div>
   );
 };
