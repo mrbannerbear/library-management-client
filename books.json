@@ -1,0 +1,371 @@
+[
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629999184i/10127019.jpg",
+    "Name": "The Lean Startup",
+    "Quantity": 10,
+    "Author": "Eric Ries",
+    "Category": "Career",
+    "Short description": "The Lean Startup is a guide to help entrepreneurs and startups build successful businesses. It provides a scientific approach to creating and managing startups and getting a desired product to customers' hands faster. The book is based on the author's personal experiences as a startup founder and his observations of other successful startups. It is a must-read for anyone who wants to start a business or is interested in entrepreneurship.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348336780i/1052.jpg",
+    "Name": "The Richest Man in Babylon",
+    "Quantity": 1,
+    "Author": "George S. Clason",
+    "Category": "Career",
+    "Short description": "The Richest Man in Babylon is a book by George S. Clason that provides financial advice through a collection of parables set in ancient Babylon. The book is based on the author's personal experiences and observations of successful people. It provides a framework for personal financial advice and is a must-read for anyone who wants to improve their financial situation.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1444688158i/26270465.jpg",
+    "Name": "Fanatical Prospecting",
+    "Quantity": 7,
+    "Author": "Jeb Blount",
+    "Category": "Career",
+    "Short description": "Fanatical Prospecting is a practical guide for prospecting and a must-read for salespeople, sales leaders, entrepreneurs, and executives. The book provides a creative approach to prospecting that works in the real world. It presents a balanced methodology for prospecting across several channels and has the strategies, techniques, and tools you require to keep your pipeline filled with top-quality opportunities. The author reveals how you can improve sales productivity and earn more revenue.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1581527774i/41881472.jpg",
+    "Name": "The Psychology of Money",
+    "Quantity": 1,
+    "Author": "Morgan Housel",
+    "Category": "Career",
+    "Short description": "The Psychology of Money is a book by Morgan Housel that explores the psychology of money and how it affects our lives. The book is based on the author's personal experiences and research, and it provides a framework for understanding how we think about money and how we can make better financial decisions. It is a must-read for anyone who wants to improve their financial situation and their life.",
+    "Rating": 4.8
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+    "Name": "Dune",
+    "Quantity": 10,
+    "Author": "Frank Herbert",
+    "Category": "Science Fiction",
+    "Short description": "Dune is a science fiction novel set in the distant future that explores themes of politics, religion, and ecology. It follows the story of Paul Atreides, a young nobleman who becomes embroiled in a power struggle on the desert planet Arrakis. The book is considered a masterpiece of science fiction and has won numerous awards.",
+    "Rating": 4.2
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1408303130i/375802.jpg",
+    "Name": "Ender's Game",
+    "Quantity": 5,
+    "Author": "Orson Scott Card",
+    "Category": "Science Fiction",
+    "Short description": "Ender's Game is a science fiction novel that follows the story of a young boy who is trained to become a military commander in a war against an alien race. The book explores themes of leadership, strategy, and the ethics of war. It is a must-read for fans of science fiction and military fiction.",
+    "Rating": 4.3
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1531891848i/11.jpg",
+    "Name": "The Hitchhiker's Guide to the Galaxy",
+    "Quantity": 7,
+    "Author": "Douglas Adams",
+    "Category": "Science Fiction",
+    "Short description": "The Hitchhiker's Guide to the Galaxy is a comedic science fiction novel that follows the misadventures of an unwitting human and his alien friend as they travel through space. The book is known for its humor, satire, and philosophical themes. It is a must-read for fans of science fiction and comedy.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575509280i/5129.jpg",
+    "Name": "Brave New World",
+    "Quantity": 3,
+    "Author": "Aldous Huxley",
+    "Category": "Science Fiction",
+    "Short description": "Brave New World is a dystopian novel that explores themes of social engineering, genetic engineering, and psychological manipulation. The book is set in a future society where people are genetically engineered and conditioned to conform to a rigid social hierarchy. It is a must-read for fans of dystopian fiction.",
+    "Rating": 4.1
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511288482i/11084145.jpg",
+    "Name": "Steve Jobs",
+    "Quantity": 10,
+    "Author": "Walter Isaacson",
+    "Category": "Biography",
+    "Short description": "Steve Jobs is a biography of Steve Jobs, the co-founder of Apple Inc. The book is based on more than forty interviews with Jobs conducted over two years, as well as interviews with more than a hundred family members, friends, adversaries, competitors, and colleagues. It provides an in-depth look at Jobs' life and career, from his early days as a college dropout to his rise as one of the most influential entrepreneurs of the 21st century.",
+    "Rating": 4.2
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg",
+    "Name": "Becoming",
+    "Quantity": 5,
+    "Author": "Michelle Obama",
+    "Category": "Biography",
+    "Short description": "Becoming is a memoir by Michelle Obama, the former First Lady of the United States. The book chronicles her life from childhood to the present day, including her time in the White House. It provides an intimate look at her life, her family, and her journey to becoming one of the most influential women in the world.",
+    "Rating": 4.8
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1523542886i/7445.jpg",
+    "Name": "The Glass Castle",
+    "Quantity": 7,
+    "Author": "Jeannette Walls",
+    "Category": "Biography",
+    "Short description": "The Glass Castle is a memoir by Jeannette Walls. The book chronicles her life from childhood to adulthood, including her experiences growing up in poverty and her relationship with her dysfunctional family. It provides an honest and unflinching look at her life, and it is a must-read for anyone who wants to understand the human experience.",
+    "Rating": 4.3
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1434682864i/92057.jpg",
+    "Name": "The Autobiography of Malcolm X",
+    "Quantity": 3,
+    "Author": "Malcolm X",
+    "Category": "Biography",
+    "Short description": "The Autobiography of Malcolm X is a memoir by Malcolm X, the African American civil rights leader. The book chronicles his life from childhood to his assassination in 1965, including his time in prison and his conversion to Islam. It provides an intimate look at his life, his beliefs, and his struggle for racial justice.",
+    "Rating": 4.7
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg",
+    "Name": "To Kill a Mockingbird",
+    "Quantity": 10,
+    "Author": "Harper Lee",
+    "Category": "Fiction",
+    "Short description": "To Kill a Mockingbird is a novel by Harper Lee that was published in 1960. The book is set in the fictional town of Maycomb, Alabama, during the Great Depression, and it follows the story of a young girl named Scout Finch as she grows up and learns about racism and injustice. The book is a classic of American literature and has won numerous awards.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490528560i/4671.jpg",
+    "Name": "The Great Gatsby",
+    "Quantity": 5,
+    "Author": "F. Scott Fitzgerald",
+    "Category": "Fiction",
+    "Short description": "The Great Gatsby is a novel by F. Scott Fitzgerald that was published in 1925. The book is set in the fictional town of West Egg on Long Island during the summer of 1922, and it follows the story of a young man named Jay Gatsby as he tries to win back his former love, Daisy Buchanan. The book is a classic of American literature and has been adapted into numerous films and stage productions.",
+    "Rating": 4.3
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684638853i/2429135.jpg",
+    "Name": "The Girl with the Dragon Tattoo",
+    "Quantity": 1,
+    "Author": "Stieg Larsson",
+    "Category": "Fiction",
+    "Short description": "The Girl with the Dragon Tattoo is a novel by Stieg Larsson that was first published in 2005. The book follows the story of Mikael Blomkvist, a journalist who is hired to investigate the disappearance of a wealthy industrialist's niece. The book is known for its complex plot, its exploration of themes such as violence against women and corruption, and its memorable characters.",
+    "Rating": 4.4
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1398034300i/5107.jpg",
+    "Name": "The Catcher in the Rye",
+    "Quantity": 3,
+    "Author": "J.D. Salinger",
+    "Category": "Fiction",
+    "Short description": "The Catcher in the Rye is a novel by J.D. Salinger that was published in 1951. The book is set in the 1940s and follows the story of Holden Caulfield, a teenage boy who has been expelled from his prep school and is wandering around New York City. The book is a classic of American literature and has been both praised and criticized for its portrayal of teenage angst and rebellion.",
+    "Rating": 4.2
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1671575793i/43822015.jpg",
+    "Name": "The Joy of Cooking",
+    "Quantity": 10,
+    "Author": "Irma S. Rombauer",
+    "Category": "Cooking",
+    "Short description": "The Joy of Cooking is a cookbook by Irma S. Rombauer that was first published in 1931. The book contains more than 4,000 recipes and covers a wide range of topics, from appetizers to desserts. It is considered a classic of American cooking and has been updated and revised numerous times.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333577773i/129650.jpg",
+    "Name": "Mastering the Art of French Cooking",
+    "Quantity": 5,
+    "Author": "Julia Child",
+    "Category": "Cooking",
+    "Short description": "Mastering the Art of French Cooking is a cookbook by Julia Child that was first published in 1961. The book contains more than 500 recipes and covers a wide range of French cuisine, from soups to pastries. It is considered a classic of French cooking and has been praised for its detailed instructions and helpful illustrations.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1407047944i/603204.jpg",
+    "Name": "How to Cook Everything",
+    "Quantity": 7,
+    "Author": "Mark Bittman",
+    "Category": "Cooking",
+    "Short description": "How to Cook Everything is a cookbook by Mark Bittman that was first published in 1998. The book contains more than 2,000 recipes and covers a wide range of topics, from appetizers to desserts. It is known for its clear and concise instructions and has been praised for its accessibility to novice cooks.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320557161i/120230.jpg",
+    "Name": "The Barefoot Contessa Cookbook",
+    "Quantity": 3,
+    "Author": "Ina Garten",
+    "Category": "Cooking",
+    "Short description": "The Barefoot Contessa Cookbook is a cookbook by Ina Garten that was first published in 1999. The book contains more than 100 recipes and covers a wide range of topics, from appetizers to desserts. It is known for its simple and elegant recipes and has been praised for its emphasis on fresh and seasonal ingredients.",
+    "Rating": 4.8
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353277730i/11588.jpg",
+    "Name": "The Shining",
+    "Quantity": 10,
+    "Author": "Stephen King",
+    "Category": "Horror",
+    "Short description": "The Shining is a horror novel by Stephen King that was first published in 1977. The book follows the story of Jack Torrance, a struggling writer and recovering alcoholic who takes a job as the winter caretaker of the Overlook Hotel in Colorado. The book is known for its suspenseful plot and its exploration of themes such as addiction, family, and the supernatural.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387151694i/17245.jpg",
+    "Name": "Dracula",
+    "Quantity": 5,
+    "Author": "Bram Stoker",
+    "Category": "Horror",
+    "Short description": "Dracula is a horror novel by Bram Stoker that was first published in 1897. The book follows the story of Count Dracula, a vampire who moves from Transylvania to England to spread the undead curse. The book is known for its gothic atmosphere and its exploration of themes such as sexuality, religion, and the occult.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631088473i/35031085.jpg",
+    "Name": "Frankenstein",
+    "Quantity": 7,
+    "Author": "Mary Shelley",
+    "Category": "Horror",
+    "Short description": "Frankenstein is a horror novel by Mary Shelley that was first published in 1818. The book follows the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment. The book is known for its exploration of themes such as ambition, responsibility, and the consequences of scientific discovery.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327871336i/89717.jpg",
+    "Name": "The Haunting of Hill House",
+    "Quantity": 3,
+    "Author": "Shirley Jackson",
+    "Category": "Horror",
+    "Short description": "The Haunting of Hill House is a horror novel by Shirley Jackson that was first published in 1959. The book follows the story of four people who come to Hill House, an 80-year-old mansion with a history of violent deaths and supernatural activity, to investigate its paranormal phenomena. The book is known for its psychological horror and its exploration of themes such as trauma, isolation, and the supernatural.",
+    "Rating": 4.8
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617037342i/40779082.jpg",
+    "Name": "The Guns of August",
+    "Quantity": 10,
+    "Author": "Barbara W. Tuchman",
+    "Category": "History",
+    "Short description": "The Guns of August is a history book by Barbara W. Tuchman that was first published in 1962. The book covers the first month of World War I, from the German invasion of Belgium to the Battle of the Marne. It is known for its vivid and detailed descriptions of the events leading up to the war and its impact on the world.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1306787560i/1067.jpg",
+    "Name": "1776",
+    "Quantity": 5,
+    "Author": "David McCullough",
+    "Category": "History",
+    "Short description": "1776 is a history book by David McCullough that was first published in 2005. The book covers the events of the American Revolution in the year 1776, from the Siege of Boston to the Battle of Trenton. It is known for its detailed and engaging narrative style and its focus on the experiences of ordinary people during the war.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1331223772i/767171.jpg",
+    "Name": "The Rise and Fall of the Third Reich",
+    "Quantity": 7,
+    "Author": "William L. Shirer",
+    "Category": "History",
+    "Short description": "The Rise and Fall of the Third Reich is a history book by William L. Shirer that was first published in 1960. The book covers the history of Nazi Germany from its rise to power in 1933 to its defeat in 1945. It is known for its detailed and comprehensive coverage of the Nazi regime and its impact on the world.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1494279423i/2767.jpg",
+    "Name": "A People's History of the United States",
+    "Quantity": 3,
+    "Author": "Howard Zinn",
+    "Category": "History",
+    "Short description": "A People's History of the United States is a history book by Howard Zinn that was first published in 1980. The book covers the history of the United States from the perspective of marginalized groups, such as women, African Americans, and Native Americans. It is known for its critical and alternative perspective on American history.",
+    "Rating": 4.8
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg",
+    "Name": "Pride and Prejudice",
+    "Quantity": 10,
+    "Author": "Jane Austen",
+    "Category": "Romance",
+    "Short description": "Pride and Prejudice is a novel by Jane Austen that was published in 1813. The book is set in rural England in the early 19th century, and it follows the story of the Bennet family, particularly the second eldest daughter Elizabeth, as she navigates the social norms of the time and falls in love with the wealthy Mr. Darcy. The book is a classic of English literature and has been adapted into numerous films and television series.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659086907i/10964.jpg",
+    "Name": "Outlander",
+    "Quantity": 5,
+    "Author": "Diana Gabaldon",
+    "Category": "Romance",
+    "Short description": "Outlander is a novel by Diana Gabaldon that was first published in 1991. The book follows the story of Claire Randall, a married combat nurse from 1945 who is mysteriously transported back in time to 1743 Scotland. The book is known for its blend of historical fiction, romance, and time travel.",
+    "Rating": 4.3
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483183484i/33648131.jpg",
+    "Name": "The Notebook",
+    "Quantity": 7,
+    "Author": "Nicholas Sparks",
+    "Category": "Romance",
+    "Short description": "The Notebook is a novel by Nicholas Sparks that was first published in 1996. The book follows the story of Noah Calhoun and Allie Nelson, two young lovers from different social classes who are separated by World War II. The book is known for its emotional depth and its exploration of themes such as love, loss, and memory.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1665087720i/17347634.jpg",
+    "Name": "Me Before You",
+    "Quantity": 3,
+    "Author": "Jojo Moyes",
+    "Category": "Romance",
+    "Short description": "Me Before You is a novel by Jojo Moyes that was first published in 2012. The book follows the story of Louisa Clark, a young woman who takes a job as a caregiver for a wealthy quadriplegic man named Will Traynor. The book is known for its exploration of themes such as disability, euthanasia, and the meaning of life.",
+    "Rating": 4.8
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1594648564i/53424992.jpg",
+    "Name": "The 5 AM Club",
+    "Quantity": 10,
+    "Author": "Robin Sharma",
+    "Category": "Self-Help",
+    "Short description": "The 5 AM Club is a self-help book by Robin Sharma that was first published in 2018. The book provides a step-by-step guide to waking up early and using the first hour of the day to improve one's life. It is based on the author's personal experiences and research, and it provides a framework for personal growth and development.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689947880i/6708.jpg",
+    "Name": "The Power of Now",
+    "Quantity": 5,
+    "Author": "Eckhart Tolle",
+    "Category": "Self-Help",
+    "Short description": "The Power of Now is a self-help book by Eckhart Tolle that was first published in 1997. The book provides a guide to spiritual enlightenment and living in the present moment. It is based on the author's personal experiences and research, and it provides a framework for understanding the nature of consciousness and the human mind.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg",
+    "Name": "Atomic Habits",
+    "Quantity": 7,
+    "Author": "James Clear",
+    "Category": "Self-Help",
+    "Short description": "Atomic Habits is a self-help book by James Clear that was first published in 2018. The book provides a step-by-step guide to building good habits and breaking bad ones. It is based on the author's personal experiences and research, and it provides a framework for understanding how habits work and how they can be changed.",
+    "Rating": 4.4
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421842784i/36072.jpg",
+    "Name": "The 7 Habits of Highly Effective People",
+    "Quantity": 3,
+    "Author": "Stephen Covey",
+    "Category": "Self-Help",
+    "Short description": "The 7 Habits of Highly Effective People is a self-help book by Stephen Covey that was first published in 1989. The book provides practical advice on how to become more effective in personal and professional life. It is based on the author's personal experiences and observations of successful people, and it provides a framework for personal growth and development.",
+    "Rating": 4.8
+  },
+
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1335860740i/7869.jpg",
+    "Name": "The Bourne Identity",
+    "Quantity": 1,
+    "Author": "Robert Ludlum",
+    "Category": "Thriller",
+    "Short description": "The Bourne Identity is a spy thriller novel by Robert Ludlum that was first published in 1980. The book follows the story of Jason Bourne, a man who is found floating in the Mediterranean Sea with no memory of his past. The book is known for its fast-paced action, its exploration of themes such as identity and memory, and its memorable characters.",
+    "Rating": 4.2
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/I/81jpy6NRw2L.jpg",
+    "Name": "The Silence of the Lambs",
+    "Quantity": 5,
+    "Author": "Thomas Harris",
+    "Category": "Thriller",
+    "Short description": "The Silence of the Lambs is a psychological thriller novel by Thomas Harris that was first published in 1988. The book follows the story of Clarice Starling, an FBI trainee who is tasked with interviewing Dr. Hannibal Lecter, a brilliant psychiatrist and cannibalistic serial killer, in order to gain insight into the mind of another serial killer. The book is known for its suspenseful plot, its exploration of themes such as psychology and criminal behavior, and its memorable characters.",
+    "Rating": 4.6
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554086139i/19288043.jpg",
+    "Name": "Gone Girl",
+    "Quantity": 4,
+    "Author": "Gillian Flynn",
+    "Category": "Thriller",
+    "Short description": "Gone Girl is a psychological thriller novel by Gillian Flynn that was first published in 2012. The book follows the story of Nick Dunne, a man who becomes the prime suspect in the disappearance of his wife Amy on their fifth wedding anniversary. The book is known for its suspenseful plot, its exploration of themes such as marriage and identity, and its memorable characters.",
+    "Rating": 4.5
+  },
+  {
+    "Image": "https://cdn2.penguin.com.au/covers/original/9780552159715.jpg",
+    "Name": "The Da Vinci Code",
+    "Quantity": 1,
+    "Author": "Dan Brown",
+    "Category": "Thriller",
+    "Short description": "The Da Vinci Code is a mystery thriller novel by Dan Brown that was first published in 2003. The book follows the story of Robert Langdon, a professor of religious symbology, as he investigates a murder in the Louvre Museum in Paris and uncovers a conspiracy involving the Holy Grail. The book is known for its suspenseful plot, its exploration of themes such as religion and history, and its controversial theories.",
+    "Rating": 4.2
+  }
+]

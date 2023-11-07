@@ -16,6 +16,7 @@ const Categories = () => {
   const HandleShowAll = () => {
     setShowAll(!showAll)
   }
+  console.log(data.map(each => each.category))
 
   const categoriesData = showAll ? data : data.slice(0, 6)
 
