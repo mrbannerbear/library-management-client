@@ -6,7 +6,7 @@ const Banner = () => {
         <div className="w-full h-full bg-gray-500/20 bg-gradient-to-b from-transparent to-black/70"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <h1 className="mb-5 text-5xl font-bold">Find Your Favorite Books</h1>
             <p className="mb-5">
             Explore a world of knowledge and imagination. 
         Dive into our extensive collection of books, 

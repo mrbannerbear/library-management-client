@@ -6,29 +6,36 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 const Modal = ({ book }) => {
+  const { user } = useContext(AuthProvider);
 
-    let { Name, Quantity } = book
+  const { register, handleSubmit } = useForm();
 
-    const { user } = useContext(AuthProvider)
-
-    const { register, handleSubmit } = useForm()
-
-    const handleBorrow = (d) => {
-        let userName = d.Name
-        let email = user.email
-        let returnDate = d.Date
-        axios.get(`http://localhost:4000/borrowedInfo?name=${userName}&book=${Name}`)
-        .then(data =>{
-            if(data.data[0]?.Name !== Name && data.data[0]?.email !== email){
-            axios.post(`http://localhost:4000/borrowedInfo?name=${user.Name}&book=${Name}`, {userName, email, Name, returnDate})
-            .then(data => toast("You have borrowed", data.data[0].Name))
-            .catch(err => console.log(err))
+  const handleBorrow = (d) => {
+    let userName = d.Name;
+    let email = user.email;
+    let returnDate = d.Date;
+    console.log(email)
+    axios
+      .get(
+        `http://localhost:4000/borrowedInfo?email=${email}&book=${book.Name}`
+      )
+      .then((data) => {console.log(data.data)
+        if (data.data.length == 0) {
+          axios
+            .post(
+              `http://localhost:4000/borrowedInfo?email=${email}&book=${book.Name}`,
+              { userName, email, returnDate, book }
+            )
+            .then((data) =>
+              toast("You have borrowed this book", data.data[0]?.book.Name)
+            )
+            .catch((err) => console.log(err));
+        } else {
+          toast("You have already borrowed this book");
         }
-        else{
-            toast("You have already borrowed this book")
-        }})
-        .catch(err => console.log(err))
-    }
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div>
@@ -41,62 +48,57 @@ const Modal = ({ book }) => {
       </button>
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box rounded-none">
+          <form className="card-body" onSubmit={handleSubmit(handleBorrow)}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                {...register("Name")}
+                type="text"
+                defaultValue={user.displayName}
+                className="input input-bordered  rounded-none focus:outline-none"
+                readOnly
+                required
+              />
+            </div>
 
-        <form className="card-body"
-          onSubmit={handleSubmit(handleBorrow)}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                {...register("Email")}
+                type="email"
+                defaultValue={user.email}
+                className="input input-bordered  rounded-none focus:outline-none"
+                readOnly
+                required
+              />
+            </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  {...register("Name")}
-                  type="text"
-                  defaultValue={user.displayName}
-                  className="input input-bordered  rounded-none focus:outline-none"
-                  readOnly
-                  required
-                />
-              </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Return Date</span>
+              </label>
+              <input
+                {...register("Date")}
+                type="date"
+                className="input input-bordered  rounded-none focus:outline-none outline-none"
+                required
+              />
+            </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  {...register("Email")}
-                  type="email"
-                  defaultValue={user.email}
-                  className="input input-bordered  rounded-none focus:outline-none"
-                  readOnly
-                  required
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Return Date</span>
-                </label>
-                <input
-                  {...register("Date")}
-                  type="date"
-                  className="input input-bordered  rounded-none focus:outline-none outline-none"
-                  required
-                />
-              </div>
-
-              <div className="modal-action">
-          <button className="btn1 border-base-content w-24">Submit</button>
-            <form method="dialog">
-              <button className="btn1 border-base-content w-24">Close</button>
-            </form>
-          </div>
-            
-        </form>
-
+            <div className="modal-action">
+              <button className="btn1 border-base-content w-24">Submit</button>
+              <form method="dialog">
+                <button className="btn1 border-base-content w-24">Close</button>
+              </form>
+            </div>
+          </form>
         </div>
       </dialog>
-     <Toaster></Toaster>
+      <Toaster></Toaster>
     </div>
   );
 };

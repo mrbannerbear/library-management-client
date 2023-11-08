@@ -11,6 +11,7 @@ import Borrowed from "../src/components/borrowed-books/Borrowed";
 import Update from "../src/components/update-books/Update";
 import EachBook from "../src/components/each-book/EachBook";
 import EachCategory from "../src/components/each-category/EachCategory";
+import ReadWrapper from "../src/components/each-book/each-book-comps/ReadWrapper";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,12 @@ const router = createBrowserRouter([
                 path: `/categories`,
                 element: <PrivateRoutes>
                     <EachCategory></EachCategory>
+                </PrivateRoutes>
+            },
+            {
+                path: `/preview`,
+                element: <PrivateRoutes>
+                    <ReadWrapper></ReadWrapper>
                 </PrivateRoutes>
             },
         ]

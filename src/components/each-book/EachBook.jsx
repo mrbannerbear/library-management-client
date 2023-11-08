@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import Rating from "react-rating";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import Modal from "./each-book-comps/Modal";
@@ -18,9 +18,6 @@ const EachBook = () => {
   }, []);
 
   const [book, setBook] = useState({});
-
-  const HandleRead = () => {};
-
 
   return (
     <div>
@@ -42,16 +39,12 @@ const EachBook = () => {
                 emptySymbol={<BsStar></BsStar>}
               ></Rating>
             </p>
-            {/* <p className="mt-4 text-sm max-w-lg">
-                {book["Short description"]}
-              </p> */}
             <p className="flex gap-5 justify-center mt-4">
-              <button
-                className="lg:w-40 btn1 border-base-content"
-                onClick={HandleRead}
-              >
-                Read
-              </button>
+              <NavLink to={`/preview?id=${book._id}`}>
+                <button className="lg:w-40 btn1 border-base-content">
+                  Read
+                </button>
+              </NavLink>
               <Modal book={book}></Modal>
             </p>
           </div>
