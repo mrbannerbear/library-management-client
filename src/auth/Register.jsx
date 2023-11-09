@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { FcGoogle } from 'react-icons/fc'
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../firebase/firebase.config";
+import axios from "axios";
 
 const Register = () => {
   const { signup, googleAuth } = useContext(AuthProvider);
@@ -44,7 +45,22 @@ const Register = () => {
         })
         .then(toast("Signed up successfully"))
         .catch(err => console.log(err));
-        navigate(location?.state ? location.state : "/")
+        const user = { email };
+        axios
+          .post("http://localhost:4000/jwt", user, { withCredentials: true })
+          .then((res) => {
+            toast("Registration successful");
+            if (res.data.success) {
+              window.location.href = "/"
+              navigate(location?.state ? location?.state : "/");
+            }
+          })
+
+          .catch((error) => {
+            console.log(error);
+          });
+        // window.location.href = "/";
+        // navigate(location?.state ? location.state : "/")
       })
       .catch((err) => {console.log(err)
         setError(err.message)});
@@ -55,8 +71,22 @@ const Register = () => {
       .then((data) => {
         console.log(data);
         setError(null);
-        toast("Signed up successfully");
-        navigate(location?.state ? location.state : "/")})
+        const user = { email: data.user.email };
+        axios
+          .post("http://localhost:4000/jwt", user, { withCredentials: true })
+          .then((res) => {
+            toast("Registration successful");
+            if (res.data.success) {
+              navigate(location?.state ? location?.state : "/");
+            }
+          })
+
+          .catch((error) => {
+            console.log(error);
+          });
+        // toast("Signed up successfully");
+        // navigate(location?.state ? location.state : "/")
+      })
       .catch((err) => {console.log(err)
       setError(err.message)});
   };

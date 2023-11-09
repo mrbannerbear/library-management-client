@@ -6,7 +6,7 @@ const Add = () => {
   const { register, handleSubmit } = useForm();
 
   const addBook = d => {
-    axios.post("http://localhost:4000/books", d)
+    axios.post("http://localhost:4000/books", d, {withCredentials: true})
     .then(data => {
       console.log(data);
       toast("Book added successfully")
@@ -77,7 +77,9 @@ const Add = () => {
                 <span className="label-text">Quantity</span>
               </label>
               <input
-                {...register("Quantity")}
+                {...register("Quantity", {
+                  valueAsNumber: true
+                })}
                 type="number"
                 placeholder="Quantity"
                 className="input input-bordered  rounded-none"

@@ -10,7 +10,7 @@ import Extra from "./HomeComps/Extra";
 
 const Home = () => {
 
-    const { user } = useContext(AuthProvider)
+    const { user, loading } = useContext(AuthProvider)
 
     return (
         <>
@@ -23,7 +23,8 @@ const Home = () => {
         <div className="lg:sticky top-0 z-50">
         <Navbar></Navbar>
         </div>
-        { user && <div className="text-center bg-base-300 text-sm lg:text-lg hidden lg:flex items-center justify-center gap-2">
+        { loading && <div className="text-center bg-base-300 text-sm lg:text-lg hidden lg:flex items-center justify-center gap-2">Loading...</div>}
+        {!loading && user && <div className="text-center bg-base-300 text-sm lg:text-lg hidden lg:flex items-center justify-center gap-2">
                 Hello, {user.displayName}
             </div>}
         <Banner></Banner>

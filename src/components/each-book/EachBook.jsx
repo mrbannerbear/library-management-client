@@ -45,7 +45,17 @@ const EachBook = () => {
                   Read
                 </button>
               </NavLink>
+              {
+                book.Quantity == 0 || book.Quantity == "0" ?
+                <button
+                className="lg:w-40 btn1 border-gray-400 text-gray-400"
+                disabled
+              >
+                Borrow
+              </button>
+              :
               <Modal book={book}></Modal>
+              }
             </p>
           </div>
         </div>

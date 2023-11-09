@@ -20,6 +20,7 @@ const Update = () => {
   const [data, setData] = useState({});
 
   const UpdateBook = (d) => {
+    console.log(d)
     axios.put(`http://localhost:4000/books${location.search}`, d)
     .then(data => {console.log(data);
     toast("Updated Successfully")})
@@ -100,7 +101,7 @@ const Update = () => {
 
                   <select
                     {...register("Category")}
-                    value={data.Category}
+                    defaultValue={data.Category}
                     className="input input-bordered  rounded-none"
                     required
                   >
@@ -147,6 +148,7 @@ const Update = () => {
               </label>
               <input min="1" max="5" step="0.1"
                 {...register("Rating")}
+                defaultValue={data.Rating}
                 type="number"
                 placeholder="Rating"
                 className="input input-bordered  rounded-none"

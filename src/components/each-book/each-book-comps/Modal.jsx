@@ -9,25 +9,32 @@ const Modal = ({ book }) => {
   const { user } = useContext(AuthProvider);
 
   const { register, handleSubmit } = useForm();
+  console.log(book._id)
 
+  let date = new Date()
+  let borrowedDate = date.toLocaleDateString()
   const handleBorrow = (d) => {
     let userName = d.Name;
     let email = user.email;
     let returnDate = d.Date;
-    console.log(email)
+    console.log(book.Quantity)
     axios
       .get(
-        `http://localhost:4000/borrowedInfo?email=${email}&book=${book.Name}`
+        `http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`
       )
-      .then((data) => {console.log(data.data)
+      .then((data) => {console.log(data)
         if (data.data.length == 0) {
           axios
             .post(
-              `http://localhost:4000/borrowedInfo?email=${email}&book=${book.Name}`,
-              { userName, email, returnDate, book }
+              `http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`,
+              { userName, email, borrowedDate, returnDate, bookID: book._id }
             )
             .then((data) =>
-              toast("You have borrowed this book", data.data[0]?.book.Name)
+          {  
+            axios.put(`http://localhost:4000/books?id=${book._id}` , { Quantity: book.Quantity  -  1} )
+            .then(data => console.log(data.data))
+            .catch(err => console.log(err));
+              toast("You have borrowed this book")}
             )
             .catch((err) => console.log(err));
         } else {

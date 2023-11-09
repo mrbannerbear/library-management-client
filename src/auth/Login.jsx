@@ -25,8 +25,9 @@ const Login = () => {
         console.log(res);
         const user = { email };
         axios
-          .post("http://localhost:5000/jwt", user, { withCredentials: true })
+          .post("http://localhost:4000/jwt", user, { withCredentials: true })
           .then((res) => {
+            toast("Log in successful");
             if (res.data.success) {
               navigate(location?.state ? location?.state : "/");
             }
@@ -37,7 +38,7 @@ const Login = () => {
           });
 
         setError(null);
-        toast("Log in successful");
+     
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
@@ -50,9 +51,21 @@ const Login = () => {
     googleAuth()
       .then((data) => {
         console.log(data);
+        const user = { email: data.user.email }
+        axios
+        .post("http://localhost:4000/jwt", user, { withCredentials: true })
+        .then((res) => {
+          toast("Log in successful");
+          if (res.data.success) {
+            navigate(location?.state ? location?.state : "/");
+          }
+        })
+
+        .catch((error) => {
+          console.log(error);
+        });
         setError(null);
-        toast("Log in successful");
-        navigate(location?.state ? location.state : "/");
+        // navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);
