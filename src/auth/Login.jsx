@@ -25,7 +25,7 @@ const Login = () => {
         console.log(res);
         const user = { email };
         axios
-          .post("http://localhost:4000/jwt", user, { withCredentials: true })
+          .post("https://lib-management-server.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
             toast("Log in successful");
             if (res.data.success) {
@@ -53,7 +53,7 @@ const Login = () => {
         console.log(data);
         const user = { email: data.user.email }
         axios
-        .post("http://localhost:4000/jwt", user, { withCredentials: true })
+        .post("https://lib-management-server.vercel.app/jwt", user, { withCredentials: true })
         .then((res) => {
           toast("Log in successful");
           if (res.data.success) {

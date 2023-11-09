@@ -19,13 +19,13 @@ const Modal = ({ book }) => {
     let returnDate = d.Date;
     console.log(book.Quantity);
     axios
-      .get(`http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`)
+      .get(`https://lib-management-server.vercel.app/borrowedInfo?email=${email}&id=${book._id}`)
       .then((data) => {
         console.log(data);
         if (data.data.length == 0) {
           axios
             .post(
-              `http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`,
+              `https://lib-management-server.vercel.app/borrowedInfo?email=${email}&id=${book._id}`,
               { userName, email, borrowedDate, returnDate, bookID: book._id }
             )
             .then((data) => {
@@ -38,7 +38,7 @@ const Modal = ({ book }) => {
                 quantity == 0
               }
               axios
-                .put(`http://localhost:4000/books?id=${book._id}`, {
+                .put(`https://lib-management-server.vercel.app/books?id=${book._id}`, {
                   Quantity: parseInt(quantity),
                 })
                 .then((data) => console.log(data.data))

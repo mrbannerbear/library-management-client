@@ -16,7 +16,7 @@ import Rating from "react-rating";
 const TrendingBooks = () => {
 
     useEffect( () => {
-        axios.get("http://localhost:4000/books")
+        axios.get("https://lib-management-server.vercel.app/books")
         .then(data => setBooks(data.data))
         .catch(err => console.log(err))
     } , [])

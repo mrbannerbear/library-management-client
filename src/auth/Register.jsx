@@ -47,7 +47,7 @@ const Register = () => {
         .catch(err => console.log(err));
         const user = { email };
         axios
-          .post("http://localhost:4000/jwt", user, { withCredentials: true })
+          .post("https://lib-management-server.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
             toast("Registration successful");
             if (res.data.success) {
@@ -73,7 +73,7 @@ const Register = () => {
         setError(null);
         const user = { email: data.user.email };
         axios
-          .post("http://localhost:4000/jwt", user, { withCredentials: true })
+          .post("https://lib-management-server.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
             toast("Registration successful");
             if (res.data.success) {

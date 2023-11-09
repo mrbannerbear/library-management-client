@@ -12,7 +12,7 @@ const EachBook = () => {
   console.log(location.search);
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/books${location.search}`)
+      .get(`https://lib-management-server.vercel.app/books${location.search}`)
       .then((data) => setBook(data.data[0]))
       .catch((err) => console.log(err));
   }, []);

@@ -12,7 +12,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/books${location.search}`)
+      .get(`https://lib-management-server.vercel.app/books${location.search}`)
       .then((data) => setData(data.data[0]))
       .catch((err) => console.log(err));
   }, []);
@@ -21,7 +21,7 @@ const Update = () => {
 
   const UpdateBook = (d) => {
     console.log(d)
-    axios.put(`http://localhost:4000/books${location.search}`, d)
+    axios.put(`https://lib-management-server.vercel.app/books${location.search}`, d)
     .then(data => {console.log(data);
     toast("Updated Successfully")})
     .catch(err => {console.log(err);

@@ -6,7 +6,7 @@ const Add = () => {
   const { register, handleSubmit } = useForm();
 
   const addBook = d => {
-    axios.post("http://localhost:4000/books", d, {withCredentials: true})
+    axios.post("https://lib-management-server.vercel.app/books", d, {withCredentials: true})
     .then(data => {
       console.log(data);
       toast("Book added successfully")

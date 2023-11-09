@@ -11,7 +11,7 @@ const EachCategory = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/books${location.search}`)
+      .get(`https://lib-management-server.vercel.app/books${location.search}`)
       .then((data) => setBooks(data.data))
       .catch((err) => console.log(err));
   }, []);

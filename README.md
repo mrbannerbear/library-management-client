@@ -1,7 +1,7 @@
 # assignment_category_0008
 # First Page Online Library
 
-## [Client-side Link](https://library-management-c1d42.web.app/allBooks)
+## [Client-side Link](https://library-management-c1d42.web.app)
 
 ### As Part of Project-11
 

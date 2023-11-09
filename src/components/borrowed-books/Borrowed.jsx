@@ -13,11 +13,11 @@ const Borrowed = () => {
   const [borrowedBooks, setBorrowedBooks] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/books`)
+    axios.get(`https://lib-management-server.vercel.app/books`)
       .then(data => setAllBooks(data.data))
       .catch(err => console.log(err));
 
-    axios.get(`http://localhost:4000/borrowedInfo?email=${user.email}`)
+    axios.get(`https://lib-management-server.vercel.app/borrowedInfo?email=${user.email}`)
       .then(data => setBorrowedInfo(data.data))
       .catch(err => console.log(err));
   }, [user.email]);
@@ -31,13 +31,13 @@ const Borrowed = () => {
 
   const HandleDelete = (_id, bookID, quantity) => {
     console.log(_id);
-    axios.delete(`http://localhost:4000/borrowedInfo?id=${_id}`)
+    axios.delete(`https://lib-management-server.vercel.app/borrowedInfo?id=${_id}`)
       .then((deleteInfo) => {
         toast("Removed from cart");
         console.log(deleteInfo);
         const remaining = borrowedBooks.filter(book => book._id !== bookID);
         setBorrowedBooks(remaining);
-        axios.put(`http://localhost:4000/books?id=${bookID}`, { Quantity: quantity + 1 })
+        axios.put(`https://lib-management-server.vercel.app/books?id=${bookID}`, { Quantity: quantity + 1 })
           .then(data => console.log(data.data))
           .catch(err => console.log(err));
       })

@@ -8,7 +8,7 @@ import Rating from "react-rating";
 const AllBooks = () => {
   useEffect(() => {
     axios
-      .get("http://localhost:4000/books")
+      .get("https://lib-management-server.vercel.app/books")
       .then((data) => setBooks(data.data))
       .catch((err) => console.log(err));
   }, []);

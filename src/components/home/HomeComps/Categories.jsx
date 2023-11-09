@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Categories = () => {
   useEffect(() => {
     axios
-      .get("http://localhost:4000/categories")
+      .get("https://lib-management-server.vercel.app/categories")
       .then((data) => setData(data.data))
       .catch((err) => console.log(err));
   }, []);
