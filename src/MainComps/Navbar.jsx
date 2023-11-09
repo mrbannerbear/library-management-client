@@ -5,18 +5,20 @@ import { BsFillSunFill, BsMoonFill } from 'react-icons/bs'
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthProvider);
-  const [ lightTheme, setLightTheme ] = useState(true)
+  const [ lightTheme, setLightTheme ] = useState(  localStorage.getItem('theme') === 'dark' ? false : true )
+  
 
   const theme = lightTheme ? "light" : "dark"
 
   useEffect( () => {
-    document.querySelector('html')?.setAttribute('data-theme', theme)
+    document.querySelector('html').setAttribute('data-theme', theme)
+    localStorage.setItem('theme', lightTheme ? 'light' : 'dark');
   } , [theme] )
 
   const HandleTheme = () => {
     setLightTheme(!lightTheme)
   }
- 
+
 
   const paths = [
     {

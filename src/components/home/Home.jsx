@@ -11,6 +11,7 @@ import Extra from "./HomeComps/Extra";
 const Home = () => {
 
     const { user, loading } = useContext(AuthProvider)
+    console.log(user)
 
     return (
         <>

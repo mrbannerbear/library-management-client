@@ -9,33 +9,42 @@ const Modal = ({ book }) => {
   const { user } = useContext(AuthProvider);
 
   const { register, handleSubmit } = useForm();
-  console.log(book._id)
+  console.log(book._id);
 
-  let date = new Date()
-  let borrowedDate = date.toLocaleDateString()
+  let date = new Date();
+  let borrowedDate = date.toLocaleDateString();
   const handleBorrow = (d) => {
     let userName = d.Name;
     let email = user.email;
     let returnDate = d.Date;
-    console.log(book.Quantity)
+    console.log(book.Quantity);
     axios
-      .get(
-        `http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`
-      )
-      .then((data) => {console.log(data)
+      .get(`http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`)
+      .then((data) => {
+        console.log(data);
         if (data.data.length == 0) {
           axios
             .post(
               `http://localhost:4000/borrowedInfo?email=${email}&id=${book._id}`,
               { userName, email, borrowedDate, returnDate, bookID: book._id }
             )
-            .then((data) =>
-          {  
-            axios.put(`http://localhost:4000/books?id=${book._id}` , { Quantity: book.Quantity  -  1} )
-            .then(data => console.log(data.data))
-            .catch(err => console.log(err));
-              toast("You have borrowed this book")}
-            )
+            .then((data) => {
+              let quantity = book.Quantity;
+              if (book.Quantity <= 0) {
+                quantity = book.Quantity;
+              } if(book.Quantity > 1){
+                quantity = book.Quantity - 1;
+              } if (book.Quantity == 1){
+                quantity == 0
+              }
+              axios
+                .put(`http://localhost:4000/books?id=${book._id}`, {
+                  Quantity: parseInt(quantity),
+                })
+                .then((data) => console.log(data.data))
+                .catch((err) => console.log(err));
+              toast("You have borrowed this book");
+            })
             .catch((err) => console.log(err));
         } else {
           toast("You have already borrowed this book");

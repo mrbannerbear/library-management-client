@@ -41,6 +41,7 @@ const AuthContext = ({ children }) => {
 
   useEffect( () => {
     const unSub = onAuthStateChanged(auth, (user) => {
+      console.log(user)
         setUser(user)
         isLoading(false)
         const loggedUser = { email: user?.email }
