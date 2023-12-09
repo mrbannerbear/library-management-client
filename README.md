@@ -3,9 +3,22 @@
 
 ## [Client-side Link](https://lib-management-surge1.surge.sh/)
 
-### As Part of Project-11
+Firstpage Library is an online library that allows users to borrow books as well add & edit their own books.
 
-The project has been built using ReactJS, NodeJS, ExpressJS, React Router, Tailwind CSS & DaisyUI along with Firebase Authentication.
+## Technologies Used:
+
+### Frontend:
+- ReactJS
+- React Router,
+- Tailwind CSS
+- DaisyUI
+
+### Backend:
+- Firebase
+- MongoDB
+- Express.js
+- Axios
+  
 
 ## Features:
 - The project includes both backend & frontend sides.
